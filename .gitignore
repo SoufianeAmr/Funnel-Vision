@@ -1,0 +1,13 @@
+# MIND data, license forbids sharing
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ruff_cache/
+
+# Test and temporary outputs
+tests/fixture/
+tests/out/
+*.tmp

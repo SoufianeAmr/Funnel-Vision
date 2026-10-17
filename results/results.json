@@ -1,0 +1,2158 @@
+{
+ "meta": {
+  "generated_utc": "2026-10-16 04:08 UTC",
+  "dataset": "MIND-large",
+  "script_version": "2.0",
+  "seed": 20261018,
+  "bootstrap_reps": 300,
+  "null_reps": 30,
+  "min_people_per_user": 20,
+  "user_fraction": 1.0,
+  "recommender_sample": 100000,
+  "python": "3.15.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.4"
+ },
+ "people_coverage": {
+  "entity_qids": 44077,
+  "humans": 10387,
+  "humans_gender_recorded": 10387,
+  "humans_women": 1725,
+  "humans_men": 8651,
+  "humans_other_gender": 11,
+  "humans_with_occupation": 10292,
+  "humans_with_citizenship": 10078,
+  "humans_with_region": 10074,
+  "role_counts": {
+   "Sports": 5434,
+   "Entertainment & arts": 1906,
+   "Politics & government": 1522,
+   "Media & writing": 419,
+   "Science, health & academia": 382,
+   "Other": 231,
+   "Business": 221,
+   "Law & justice": 177,
+   "Unknown": 95
+  },
+  "entity_confidence": {
+   "share_equal_1": 0.695324,
+   "share_ge_0_9": 1.0,
+   "median": 1.0
+  }
+ },
+ "data": {
+  "dataset": "MIND-large",
+  "splits": [
+   "train",
+   "dev"
+  ],
+  "feed_refreshes_by_split": {
+   "train": 2232748,
+   "dev": 376471
+  },
+  "users": 750434,
+  "impression_logs": 2609219,
+  "displays": 97592931,
+  "clicks": 3958501,
+  "ctr": 0.040561,
+  "items_without_metadata": 0,
+  "news_rows": 104151,
+  "articles_in_circulation": 29309,
+  "first_log": "2019-11-09 00:00:00",
+  "last_log": "2019-11-15 23:59:43",
+  "categories": {
+   "autos": 939,
+   "entertainment": 379,
+   "finance": 1804,
+   "foodanddrink": 1435,
+   "games": 0,
+   "health": 1049,
+   "kids": 97,
+   "lifestyle": 1797,
+   "middleeast": 0,
+   "movies": 325,
+   "music": 434,
+   "news": 8086,
+   "northamerica": 1,
+   "sports": 8284,
+   "travel": 1582,
+   "tv": 380,
+   "video": 1517,
+   "weather": 1200
+  }
+ },
+ "article_coverage": {
+  "share_with_entity": 0.85397,
+  "share_with_person": 0.291822,
+  "share_with_gendered_person": 0.291822,
+  "share_with_woman": 0.052066,
+  "share_men_only": 0.239483,
+  "mean_people_per_article_with_people": 1.571963,
+  "share_displays_with_gendered_person": 0.334366,
+  "share_by_category_with_person": {
+   "autos": 0.031949,
+   "entertainment": 0.366755,
+   "finance": 0.103659,
+   "foodanddrink": 0.047387,
+   "health": 0.077216,
+   "kids": 0.103093,
+   "lifestyle": 0.137451,
+   "movies": 0.501538,
+   "music": 0.569124,
+   "news": 0.235716,
+   "northamerica": 1.0,
+   "sports": 0.532714,
+   "travel": 0.0689,
+   "tv": 0.5,
+   "video": 0.471325,
+   "weather": 0.039167
+  }
+ },
+ "funnel_gender": {
+  "women_share": {
+   "published": 0.135515,
+   "shown": 0.335204,
+   "clicked": 0.328136
+  },
+  "men_share": {
+   "published": 0.863444,
+   "shown": 0.660985,
+   "clicked": 0.668404
+  },
+  "other_share": {
+   "published": 0.001041,
+   "shown": 0.003811,
+   "clicked": 0.003461
+  },
+  "ratio_shown_vs_published": 2.473555,
+  "ratio_clicked_vs_shown": 0.978913,
+  "ratio_clicked_vs_published": 2.421395,
+  "ci95": {
+   "shown": [
+    0.334944,
+    0.33545
+   ],
+   "clicked": [
+    0.327284,
+    0.329126
+   ],
+   "ratio_shown_vs_published": [
+    2.471636,
+    2.475373
+   ],
+   "ratio_clicked_vs_shown": [
+    0.976534,
+    0.981782
+   ],
+   "ratio_clicked_vs_published": [
+    2.415108,
+    2.428707
+   ]
+  },
+  "gendered_appearances": {
+   "published": 13445.0,
+   "shown": 51418192.0,
+   "clicked": 2455016.0
+  },
+  "women_per_man": {
+   "published": 0.156947,
+   "shown": 0.507128,
+   "clicked": 0.490924
+  }
+ },
+ "article_reach": {
+  "features_a_woman": {
+   "articles": 1526,
+   "mean_displays": 8337.340105,
+   "median_displays": 69.0,
+   "ctr": 0.045581,
+   "share_of_articles": 0.052066,
+   "share_of_displays": 0.130366,
+   "share_of_clicks": 0.146499
+  },
+  "men_only": {
+   "articles": 7019,
+   "mean_displays": 2826.87776,
+   "median_displays": 50.0,
+   "ctr": 0.050058,
+   "share_of_articles": 0.239483,
+   "share_of_displays": 0.203312,
+   "share_of_clicks": 0.250913
+  },
+  "no_people": {
+   "articles": 20756,
+   "mean_displays": 3129.755926,
+   "median_displays": 55.0,
+   "ctr": 0.036665,
+   "share_of_articles": 0.708178,
+   "share_of_displays": 0.665634,
+   "share_of_clicks": 0.601695
+  },
+  "any_person": {
+   "articles": 8553,
+   "mean_displays": 3815.236408,
+   "median_displays": 53.0,
+   "ctr": 0.048318,
+   "share_of_articles": 0.291822,
+   "share_of_displays": 0.334366,
+   "share_of_clicks": 0.398305
+  }
+ },
+ "article_reach_by_section": {
+  "News": {
+   "features_a_woman": {
+    "articles": 458,
+    "mean_displays": 5103.222707,
+    "median_displays": 88.5,
+    "ctr": 0.056748
+   },
+   "men_only": {
+    "articles": 1449,
+    "mean_displays": 5168.99931,
+    "median_displays": 89.0,
+    "ctr": 0.037865
+   }
+  },
+  "Sports": {
+   "features_a_woman": {
+    "articles": 125,
+    "mean_displays": 840.504,
+    "median_displays": 33.0,
+    "ctr": 0.040138
+   },
+   "men_only": {
+    "articles": 4288,
+    "mean_displays": 1554.554104,
+    "median_displays": 44.0,
+    "ctr": 0.061295
+   }
+  },
+  "Money": {
+   "features_a_woman": {
+    "articles": 40,
+    "mean_displays": 7155.325,
+    "median_displays": 108.5,
+    "ctr": 0.03379
+   },
+   "men_only": {
+    "articles": 147,
+    "mean_displays": 6458.047619,
+    "median_displays": 87.0,
+    "ctr": 0.031206
+   }
+  },
+  "Entertainment": {
+   "features_a_woman": {
+    "articles": 625,
+    "mean_displays": 9377.696,
+    "median_displays": 68.0,
+    "ctr": 0.042987
+   },
+   "men_only": {
+    "articles": 834,
+    "mean_displays": 3952.304556,
+    "median_displays": 42.0,
+    "ctr": 0.061867
+   }
+  },
+  "Lifestyle": {
+   "features_a_woman": {
+    "articles": 278,
+    "mean_displays": 14867.514388,
+    "median_displays": 94.0,
+    "ctr": 0.043899
+   },
+   "men_only": {
+    "articles": 301,
+    "mean_displays": 4785.687708,
+    "median_displays": 65.0,
+    "ctr": 0.04685
+   }
+  }
+ },
+ "category": {
+  "autos": {
+   "published": {
+    "women_share": 0.040816,
+    "gendered_appearances": 49.0
+   },
+   "shown": {
+    "women_share": 0.005341,
+    "gendered_appearances": 96615.0
+   },
+   "clicked": {
+    "women_share": 0.000709,
+    "gendered_appearances": 2820.0
+   }
+  },
+  "entertainment": {
+   "published": {
+    "women_share": 0.487603,
+    "gendered_appearances": 242.0
+   },
+   "shown": {
+    "women_share": 0.547388,
+    "gendered_appearances": 7307466.0
+   },
+   "clicked": {
+    "women_share": 0.572476,
+    "gendered_appearances": 294685.0
+   }
+  },
+  "finance": {
+   "published": {
+    "women_share": 0.179372,
+    "gendered_appearances": 223.0
+   },
+   "shown": {
+    "women_share": 0.200147,
+    "gendered_appearances": 1430017.0
+   },
+   "clicked": {
+    "women_share": 0.207305,
+    "gendered_appearances": 46651.0
+   }
+  },
+  "foodanddrink": {
+   "published": {
+    "women_share": 0.2875,
+    "gendered_appearances": 80.0
+   },
+   "shown": {
+    "women_share": 0.466661,
+    "gendered_appearances": 494267.0
+   },
+   "clicked": {
+    "women_share": 0.467049,
+    "gendered_appearances": 13414.0
+   }
+  },
+  "games": {
+   "published": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   },
+   "shown": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   },
+   "clicked": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   }
+  },
+  "health": {
+   "published": {
+    "women_share": 0.534091,
+    "gendered_appearances": 88.0
+   },
+   "shown": {
+    "women_share": 0.828111,
+    "gendered_appearances": 740278.0
+   },
+   "clicked": {
+    "women_share": 0.916629,
+    "gendered_appearances": 38059.0
+   }
+  },
+  "kids": {
+   "published": {
+    "women_share": 0.5,
+    "gendered_appearances": 14.0
+   },
+   "shown": {
+    "women_share": 0.5,
+    "gendered_appearances": 14.0
+   },
+   "clicked": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   }
+  },
+  "lifestyle": {
+   "published": {
+    "women_share": 0.616715,
+    "gendered_appearances": 347.0
+   },
+   "shown": {
+    "women_share": 0.685387,
+    "gendered_appearances": 5355910.0
+   },
+   "clicked": {
+    "women_share": 0.598992,
+    "gendered_appearances": 278593.0
+   }
+  },
+  "middleeast": {
+   "published": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   },
+   "shown": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   },
+   "clicked": {
+    "women_share": null,
+    "gendered_appearances": 0.0
+   }
+  },
+  "movies": {
+   "published": {
+    "women_share": 0.324415,
+    "gendered_appearances": 299.0
+   },
+   "shown": {
+    "women_share": 0.52252,
+    "gendered_appearances": 2212357.0
+   },
+   "clicked": {
+    "women_share": 0.631047,
+    "gendered_appearances": 122517.0
+   }
+  },
+  "music": {
+   "published": {
+    "women_share": 0.453089,
+    "gendered_appearances": 437.0
+   },
+   "shown": {
+    "women_share": 0.589955,
+    "gendered_appearances": 4058813.0
+   },
+   "clicked": {
+    "women_share": 0.528622,
+    "gendered_appearances": 190974.0
+   }
+  },
+  "news": {
+   "published": {
+    "women_share": 0.172813,
+    "gendered_appearances": 2847.0
+   },
+   "shown": {
+    "women_share": 0.163024,
+    "gendered_appearances": 15434547.0
+   },
+   "clicked": {
+    "women_share": 0.203414,
+    "gendered_appearances": 688449.0
+   }
+  },
+  "northamerica": {
+   "published": {
+    "women_share": 0.0,
+    "gendered_appearances": 1.0
+   },
+   "shown": {
+    "women_share": 0.0,
+    "gendered_appearances": 394.0
+   },
+   "clicked": {
+    "women_share": 0.0,
+    "gendered_appearances": 12.0
+   }
+  },
+  "sports": {
+   "published": {
+    "women_share": 0.02207,
+    "gendered_appearances": 7159.0
+   },
+   "shown": {
+    "women_share": 0.016706,
+    "gendered_appearances": 9784715.0
+   },
+   "clicked": {
+    "women_share": 0.013535,
+    "gendered_appearances": 534112.0
+   }
+  },
+  "travel": {
+   "published": {
+    "women_share": 0.226562,
+    "gendered_appearances": 128.0
+   },
+   "shown": {
+    "women_share": 0.127424,
+    "gendered_appearances": 254654.0
+   },
+   "clicked": {
+    "women_share": 0.113138,
+    "gendered_appearances": 4057.0
+   }
+  },
+  "tv": {
+   "published": {
+    "women_share": 0.452381,
+    "gendered_appearances": 294.0
+   },
+   "shown": {
+    "women_share": 0.528105,
+    "gendered_appearances": 3806277.0
+   },
+   "clicked": {
+    "women_share": 0.394655,
+    "gendered_appearances": 229469.0
+   }
+  },
+  "video": {
+   "published": {
+    "women_share": 0.2123,
+    "gendered_appearances": 1187.0
+   },
+   "shown": {
+    "women_share": 0.183167,
+    "gendered_appearances": 293339.0
+   },
+   "clicked": {
+    "women_share": 0.178892,
+    "gendered_appearances": 10034.0
+   }
+  },
+  "weather": {
+   "published": {
+    "women_share": 0.24,
+    "gendered_appearances": 50.0
+   },
+   "shown": {
+    "women_share": 0.725676,
+    "gendered_appearances": 148529.0
+   },
+   "clicked": {
+    "women_share": 0.707692,
+    "gendered_appearances": 1170.0
+   }
+  }
+ },
+ "category_dissimilarity": {
+  "published": 0.519386,
+  "shown": 0.536162,
+  "clicked": 0.489146
+ },
+ "section": {
+  "News": {
+   "published": {
+    "women_share": 0.172753,
+    "share_of_women": 0.270033,
+    "share_of_men": 0.20286,
+    "gendered_appearances": 2848.0
+   },
+   "shown": {
+    "women_share": 0.16302,
+    "share_of_women": 0.145989,
+    "share_of_men": 0.380112,
+    "gendered_appearances": 15434941.0
+   },
+   "clicked": {
+    "women_share": 0.20341,
+    "share_of_women": 0.173838,
+    "share_of_men": 0.33421,
+    "gendered_appearances": 688461.0
+   }
+  },
+  "Sports": {
+   "published": {
+    "women_share": 0.02207,
+    "share_of_women": 0.086718,
+    "share_of_men": 0.603067,
+    "gendered_appearances": 7159.0
+   },
+   "shown": {
+    "women_share": 0.016706,
+    "share_of_women": 0.009484,
+    "share_of_men": 0.283089,
+    "gendered_appearances": 9784715.0
+   },
+   "clicked": {
+    "women_share": 0.013535,
+    "share_of_women": 0.008974,
+    "share_of_men": 0.321086,
+    "gendered_appearances": 534112.0
+   }
+  },
+  "Money": {
+   "published": {
+    "women_share": 0.179372,
+    "share_of_women": 0.021954,
+    "share_of_men": 0.015764,
+    "gendered_appearances": 223.0
+   },
+   "shown": {
+    "women_share": 0.200147,
+    "share_of_women": 0.016606,
+    "share_of_men": 0.033655,
+    "gendered_appearances": 1430017.0
+   },
+   "clicked": {
+    "women_share": 0.207305,
+    "share_of_women": 0.012005,
+    "share_of_men": 0.022536,
+    "gendered_appearances": 46651.0
+   }
+  },
+  "Entertainment": {
+   "published": {
+    "women_share": 0.325516,
+    "share_of_women": 0.441822,
+    "share_of_men": 0.14282,
+    "gendered_appearances": 2473.0
+   },
+   "shown": {
+    "women_share": 0.543854,
+    "share_of_women": 0.557822,
+    "share_of_men": 0.231769,
+    "gendered_appearances": 17678266.0
+   },
+   "clicked": {
+    "women_share": 0.518266,
+    "share_of_women": 0.545351,
+    "share_of_men": 0.244212,
+    "gendered_appearances": 847679.0
+   }
+  },
+  "Lifestyle": {
+   "published": {
+    "women_share": 0.440701,
+    "share_of_women": 0.179473,
+    "share_of_men": 0.03549,
+    "gendered_appearances": 742.0
+   },
+   "shown": {
+    "women_share": 0.656579,
+    "share_of_women": 0.270099,
+    "share_of_men": 0.071376,
+    "gendered_appearances": 7090253.0
+   },
+   "clicked": {
+    "women_share": 0.619068,
+    "share_of_women": 0.259832,
+    "share_of_men": 0.077956,
+    "gendered_appearances": 338113.0
+   }
+  }
+ },
+ "section_dissimilarity": {
+  "published": 0.516349,
+  "shown": 0.524776,
+  "clicked": 0.483015
+ },
+ "section_dissimilarity_ci95": {
+  "shown": [
+   0.524368,
+   0.525173
+  ],
+  "clicked": [
+   0.48172,
+   0.484148
+  ]
+ },
+ "decomposition": {
+  "by_category": {
+   "shown_vs_published": {
+    "total": 0.199689,
+    "within": 0.009925,
+    "mix": 0.189764,
+    "groups": 16,
+    "top_contributors": [
+     {
+      "group": "entertainment",
+      "within": 0.001076,
+      "mix": 0.067941
+     },
+     {
+      "group": "lifestyle",
+      "within": 0.001772,
+      "mix": 0.053703
+     },
+     {
+      "group": "music",
+      "within": 0.004449,
+      "mix": 0.027394
+     },
+     {
+      "group": "tv",
+      "within": 0.001656,
+      "mix": 0.027545
+     },
+     {
+      "group": "video",
+      "within": -0.002572,
+      "mix": -0.015126
+     },
+     {
+      "group": "movies",
+      "within": 0.004406,
+      "mix": 0.010862
+     },
+     {
+      "group": "news",
+      "within": -0.002073,
+      "mix": 0.014415
+     },
+     {
+      "group": "sports",
+      "within": -0.002856,
+      "mix": -0.005716
+     },
+     {
+      "group": "health",
+      "within": 0.001924,
+      "mix": 0.006502
+     },
+     {
+      "group": "foodanddrink",
+      "within": 0.001066,
+      "mix": 0.001709
+     },
+     {
+      "group": "finance",
+      "within": 0.000345,
+      "mix": 0.002247
+     },
+     {
+      "group": "travel",
+      "within": -0.000944,
+      "mix": -0.000582
+     }
+    ]
+   },
+   "clicked_vs_shown": {
+    "total": -0.007068,
+    "within": -0.002643,
+    "mix": -0.004426,
+    "groups": 16,
+    "top_contributors": [
+     {
+      "group": "entertainment",
+      "within": 0.003565,
+      "mix": -0.012643
+     },
+     {
+      "group": "movies",
+      "within": 0.00467,
+      "mix": 0.00434
+     },
+     {
+      "group": "news",
+      "within": 0.012124,
+      "mix": -0.004018
+     },
+     {
+      "group": "music",
+      "within": -0.004841,
+      "mix": -0.000607
+     },
+     {
+      "group": "lifestyle",
+      "within": -0.008999,
+      "mix": 0.00558
+     },
+     {
+      "group": "health",
+      "within": 0.001274,
+      "mix": 0.001013
+     },
+     {
+      "group": "tv",
+      "within": -0.009879,
+      "mix": 0.007673
+     },
+     {
+      "group": "foodanddrink",
+      "within": 4e-06,
+      "mix": -0.001938
+     },
+     {
+      "group": "weather",
+      "within": -5.2e-05,
+      "mix": -0.001707
+     },
+     {
+      "group": "finance",
+      "within": 0.000199,
+      "mix": -0.001826
+     },
+     {
+      "group": "travel",
+      "within": -7.1e-05,
+      "mix": -0.000373
+     },
+     {
+      "group": "video",
+      "within": -2.4e-05,
+      "mix": -0.000289
+     }
+    ]
+   }
+  },
+  "by_subcategory": {
+   "shown_vs_published": {
+    "total": 0.199689,
+    "within": 0.002975,
+    "mix": 0.196714,
+    "groups": 156,
+    "top_contributors": [
+     {
+      "group": "entertainment/entertainment-celebrity",
+      "within": -0.000196,
+      "mix": 0.035833
+     },
+     {
+      "group": "entertainment/celebrity",
+      "within": 0.000571,
+      "mix": 0.032484
+     },
+     {
+      "group": "lifestyle/lifestyleroyals",
+      "within": -0.001003,
+      "mix": 0.033347
+     },
+     {
+      "group": "tv/tv-celebrity",
+      "within": -0.000106,
+      "mix": 0.019431
+     },
+     {
+      "group": "video/news",
+      "within": -0.008213,
+      "mix": -0.007991
+     },
+     {
+      "group": "music/music-celebrity",
+      "within": -1.6e-05,
+      "mix": 0.015369
+     },
+     {
+      "group": "movies/movienews",
+      "within": 0.005657,
+      "mix": 0.008868
+     },
+     {
+      "group": "music/cma-awards",
+      "within": 0.000365,
+      "mix": 0.013848
+     },
+     {
+      "group": "lifestyle/lifestylecelebstyle",
+      "within": 6.6e-05,
+      "mix": 0.010258
+     },
+     {
+      "group": "news/newsus",
+      "within": 0.00155,
+      "mix": 0.006507
+     },
+     {
+      "group": "lifestyle/lifestylebuzz",
+      "within": 0.002505,
+      "mix": 0.004583
+     },
+     {
+      "group": "tv/tvnews",
+      "within": 0.001298,
+      "mix": 0.005036
+     }
+    ]
+   },
+   "clicked_vs_shown": {
+    "total": -0.007068,
+    "within": 0.001237,
+    "mix": -0.008306,
+    "groups": 156,
+    "top_contributors": [
+     {
+      "group": "entertainment/celebrity",
+      "within": -0.001792,
+      "mix": -0.011634
+     },
+     {
+      "group": "movies/movienews",
+      "within": 0.002067,
+      "mix": 0.008081
+     },
+     {
+      "group": "news/newsus",
+      "within": 0.004661,
+      "mix": 0.004554
+     },
+     {
+      "group": "music/cma-awards",
+      "within": -0.000189,
+      "mix": -0.006818
+     },
+     {
+      "group": "entertainment/entertainment-celebrity",
+      "within": 0.00273,
+      "mix": 0.002283
+     },
+     {
+      "group": "lifestyle/lifestyleroyals",
+      "within": -0.005409,
+      "mix": 0.009235
+     },
+     {
+      "group": "lifestyle/lifestylecelebstyle",
+      "within": 0.000568,
+      "mix": -0.004239
+     },
+     {
+      "group": "music/music-celebrity",
+      "within": -0.000234,
+      "mix": 0.003611
+     },
+     {
+      "group": "tv/tv-gallery",
+      "within": -0.001495,
+      "mix": -0.001044
+     },
+     {
+      "group": "tv/topnews",
+      "within": 0.0,
+      "mix": 0.002094
+     },
+     {
+      "group": "news/elections-2020-us",
+      "within": -0.00231,
+      "mix": 0.000275
+     },
+     {
+      "group": "lifestyle/awardstyle",
+      "within": -9.2e-05,
+      "mix": -0.001904
+     }
+    ]
+   }
+  }
+ },
+ "roles": {
+  "published": {
+   "Politics & government": {
+    "women_share": 0.15708,
+    "share_of_women": 0.296909,
+    "share_of_men": 0.249503
+   },
+   "Business": {
+    "women_share": 0.039773,
+    "share_of_women": 0.003863,
+    "share_of_men": 0.014605
+   },
+   "Science, health & academia": {
+    "women_share": 0.29703,
+    "share_of_women": 0.049669,
+    "share_of_men": 0.018408
+   },
+   "Law & justice": {
+    "women_share": 0.157233,
+    "share_of_women": 0.013797,
+    "share_of_men": 0.011581
+   },
+   "Media & writing": {
+    "women_share": 0.427245,
+    "share_of_women": 0.076159,
+    "share_of_men": 0.015988
+   },
+   "Sports": {
+    "women_share": 0.021965,
+    "share_of_women": 0.084989,
+    "share_of_men": 0.592602
+   },
+   "Entertainment & arts": {
+    "women_share": 0.476932,
+    "share_of_women": 0.456402,
+    "share_of_men": 0.077176
+   },
+   "Other": {
+    "women_share": 0.12406,
+    "share_of_women": 0.018212,
+    "share_of_men": 0.020137
+   }
+  },
+  "shown": {
+   "Politics & government": {
+    "women_share": 0.15139,
+    "share_of_women": 0.136303,
+    "share_of_men": 0.386478
+   },
+   "Business": {
+    "women_share": 0.001238,
+    "share_of_women": 6.6e-05,
+    "share_of_men": 0.027005
+   },
+   "Science, health & academia": {
+    "women_share": 0.192794,
+    "share_of_women": 0.007584,
+    "share_of_men": 0.016061
+   },
+   "Law & justice": {
+    "women_share": 0.461101,
+    "share_of_women": 0.015141,
+    "share_of_men": 0.008951
+   },
+   "Media & writing": {
+    "women_share": 0.44944,
+    "share_of_women": 0.013855,
+    "share_of_men": 0.008585
+   },
+   "Sports": {
+    "women_share": 0.026749,
+    "share_of_women": 0.018749,
+    "share_of_men": 0.345063
+   },
+   "Entertainment & arts": {
+    "women_share": 0.653351,
+    "share_of_women": 0.774474,
+    "share_of_men": 0.202076
+   },
+   "Other": {
+    "women_share": 0.747457,
+    "share_of_women": 0.033828,
+    "share_of_men": 0.005781
+   }
+  },
+  "clicked": {
+   "Politics & government": {
+    "women_share": 0.176544,
+    "share_of_women": 0.143196,
+    "share_of_men": 0.327308
+   },
+   "Business": {
+    "women_share": 0.000276,
+    "share_of_women": 1.6e-05,
+    "share_of_men": 0.028731
+   },
+   "Science, health & academia": {
+    "women_share": 0.221305,
+    "share_of_women": 0.005847,
+    "share_of_men": 0.010081
+   },
+   "Law & justice": {
+    "women_share": 0.494426,
+    "share_of_women": 0.018077,
+    "share_of_men": 0.009058
+   },
+   "Media & writing": {
+    "women_share": 0.515095,
+    "share_of_women": 0.010377,
+    "share_of_men": 0.004787
+   },
+   "Sports": {
+    "women_share": 0.017579,
+    "share_of_women": 0.015066,
+    "share_of_men": 0.412605
+   },
+   "Entertainment & arts": {
+    "women_share": 0.643653,
+    "share_of_women": 0.770309,
+    "share_of_men": 0.203801
+   },
+   "Other": {
+    "women_share": 0.833674,
+    "share_of_women": 0.037113,
+    "share_of_men": 0.003629
+   }
+  }
+ },
+ "scorecard": [
+  {
+   "group": "Women (all sections)",
+   "family": "Gender",
+   "published": 0.135515,
+   "shown": 0.335204,
+   "clicked": 0.328136,
+   "ratio_platform": 2.473555,
+   "ratio_platform_ci95": [
+    2.471636,
+    2.475373
+   ],
+   "ratio_reader": 0.978913,
+   "ratio_reader_ci95": [
+    0.976534,
+    0.981782
+   ]
+  },
+  {
+   "group": "Women in News",
+   "family": "Gender by section",
+   "published": 0.172753,
+   "shown": 0.16302,
+   "clicked": 0.20341,
+   "ratio_platform": 0.943662,
+   "ratio_platform_ci95": [
+    0.942252,
+    0.945074
+   ],
+   "ratio_reader": 1.24776,
+   "ratio_reader_ci95": [
+    1.24243,
+    1.252662
+   ]
+  },
+  {
+   "group": "Women in Sports",
+   "family": "Gender by section",
+   "published": 0.02207,
+   "shown": 0.016706,
+   "clicked": 0.013535,
+   "ratio_platform": 0.75693,
+   "ratio_platform_ci95": [
+    0.751242,
+    0.763444
+   ],
+   "ratio_reader": 0.810187,
+   "ratio_reader_ci95": [
+    0.78661,
+    0.837453
+   ]
+  },
+  {
+   "group": "Women in Money",
+   "family": "Gender by section",
+   "published": 0.179372,
+   "shown": 0.200147,
+   "clicked": 0.207305,
+   "ratio_platform": 1.115817,
+   "ratio_platform_ci95": [
+    1.112493,
+    1.119187
+   ],
+   "ratio_reader": 1.035767,
+   "ratio_reader_ci95": [
+    1.020548,
+    1.05199
+   ]
+  },
+  {
+   "group": "Women in Entertainment",
+   "family": "Gender by section",
+   "published": 0.325516,
+   "shown": 0.543854,
+   "clicked": 0.518266,
+   "ratio_platform": 1.670745,
+   "ratio_platform_ci95": [
+    1.669639,
+    1.671735
+   ],
+   "ratio_reader": 0.952951,
+   "ratio_reader_ci95": [
+    0.950375,
+    0.955008
+   ]
+  },
+  {
+   "group": "Women in Lifestyle",
+   "family": "Gender by section",
+   "published": 0.440701,
+   "shown": 0.656579,
+   "clicked": 0.619068,
+   "ratio_platform": 1.489851,
+   "ratio_platform_ci95": [
+    1.488845,
+    1.490896
+   ],
+   "ratio_reader": 0.94287,
+   "ratio_reader_ci95": [
+    0.939879,
+    0.945294
+   ]
+  },
+  {
+   "group": "Politics & government",
+   "family": "Role (share of all people)",
+   "published": 0.254742,
+   "shown": 0.300401,
+   "clicked": 0.265088,
+   "ratio_platform": 1.179237,
+   "ratio_platform_ci95": [
+    1.177724,
+    1.180848
+   ],
+   "ratio_reader": 0.882448,
+   "ratio_reader_ci95": [
+    0.879359,
+    0.885646
+   ]
+  },
+  {
+   "group": "Business",
+   "family": "Role (share of all people)",
+   "published": 0.01309,
+   "shown": 0.017835,
+   "clicked": 0.019166,
+   "ratio_platform": 1.362423,
+   "ratio_platform_ci95": [
+    1.358771,
+    1.365636
+   ],
+   "ratio_reader": 1.074678,
+   "ratio_reader_ci95": [
+    1.065585,
+    1.083605
+   ]
+  },
+  {
+   "group": "Science, health & academia",
+   "family": "Role (share of all people)",
+   "published": 0.022536,
+   "shown": 0.013124,
+   "clicked": 0.008634,
+   "ratio_platform": 0.582354,
+   "ratio_platform_ci95": [
+    0.580785,
+    0.583973
+   ],
+   "ratio_reader": 0.657886,
+   "ratio_reader_ci95": [
+    0.648815,
+    0.66785
+   ]
+  },
+  {
+   "group": "Law & justice",
+   "family": "Role (share of all people)",
+   "published": 0.011826,
+   "shown": 0.010956,
+   "clicked": 0.011949,
+   "ratio_platform": 0.92643,
+   "ratio_platform_ci95": [
+    0.923721,
+    0.928725
+   ],
+   "ratio_reader": 1.090643,
+   "ratio_reader_ci95": [
+    1.078565,
+    1.101763
+   ]
+  },
+  {
+   "group": "Media & writing",
+   "family": "Role (share of all people)",
+   "published": 0.024024,
+   "shown": 0.010286,
+   "clicked": 0.006584,
+   "ratio_platform": 0.428146,
+   "ratio_platform_ci95": [
+    0.426821,
+    0.429402
+   ],
+   "ratio_reader": 0.640119,
+   "ratio_reader_ci95": [
+    0.629043,
+    0.649127
+   ]
+  },
+  {
+   "group": "Sports",
+   "family": "Role (share of all people)",
+   "published": 0.521458,
+   "shown": 0.233861,
+   "clicked": 0.280098,
+   "ratio_platform": 0.448475,
+   "ratio_platform_ci95": [
+    0.447878,
+    0.4491
+   ],
+   "ratio_reader": 1.197713,
+   "ratio_reader_ci95": [
+    1.19395,
+    1.201726
+   ]
+  },
+  {
+   "group": "Entertainment & arts",
+   "family": "Role (share of all people)",
+   "published": 0.12897,
+   "shown": 0.395505,
+   "clicked": 0.391135,
+   "ratio_platform": 3.066648,
+   "ratio_platform_ci95": [
+    3.06379,
+    3.069258
+   ],
+   "ratio_reader": 0.988951,
+   "ratio_reader_ci95": [
+    0.986377,
+    0.991569
+   ]
+  },
+  {
+   "group": "Other",
+   "family": "Role (share of all people)",
+   "published": 0.019784,
+   "shown": 0.0151,
+   "clicked": 0.014549,
+   "ratio_platform": 0.76325,
+   "ratio_platform_ci95": [
+    0.761275,
+    0.765402
+   ],
+   "ratio_reader": 0.963512,
+   "ratio_reader_ci95": [
+    0.953585,
+    0.973398
+   ]
+  },
+  {
+   "group": "United States",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.826339,
+   "shown": 0.816491,
+   "clicked": 0.829381,
+   "ratio_platform": 0.988082,
+   "ratio_platform_ci95": [
+    0.987901,
+    0.988271
+   ],
+   "ratio_reader": 1.015786,
+   "ratio_reader_ci95": [
+    1.015124,
+    1.016404
+   ]
+  },
+  {
+   "group": "Canada",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.027963,
+   "shown": 0.026526,
+   "clicked": 0.019583,
+   "ratio_platform": 0.948582,
+   "ratio_platform_ci95": [
+    0.946412,
+    0.950722
+   ],
+   "ratio_reader": 0.738263,
+   "ratio_reader_ci95": [
+    0.731172,
+    0.745758
+   ]
+  },
+  {
+   "group": "Europe",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.095563,
+   "shown": 0.100046,
+   "clicked": 0.094362,
+   "ratio_platform": 1.046911,
+   "ratio_platform_ci95": [
+    1.045535,
+    1.048284
+   ],
+   "ratio_reader": 0.943187,
+   "ratio_reader_ci95": [
+    0.93833,
+    0.948046
+   ]
+  },
+  {
+   "group": "Asia",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.013788,
+   "shown": 0.029021,
+   "clicked": 0.035867,
+   "ratio_platform": 2.104818,
+   "ratio_platform_ci95": [
+    2.101093,
+    2.108346
+   ],
+   "ratio_reader": 1.235927,
+   "ratio_reader_ci95": [
+    1.226751,
+    1.245501
+   ]
+  },
+  {
+   "group": "Africa",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.006744,
+   "shown": 0.005136,
+   "clicked": 0.003624,
+   "ratio_platform": 0.761629,
+   "ratio_platform_ci95": [
+    0.75871,
+    0.764344
+   ],
+   "ratio_reader": 0.705571,
+   "ratio_reader_ci95": [
+    0.69461,
+    0.717626
+   ]
+  },
+  {
+   "group": "Latin America & Caribbean",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.022934,
+   "shown": 0.018978,
+   "clicked": 0.015168,
+   "ratio_platform": 0.827524,
+   "ratio_platform_ci95": [
+    0.825726,
+    0.829461
+   ],
+   "ratio_reader": 0.799222,
+   "ratio_reader_ci95": [
+    0.791217,
+    0.805589
+   ]
+  },
+  {
+   "group": "Oceania",
+   "family": "Citizenship (share of people with one)",
+   "published": 0.006669,
+   "shown": 0.003802,
+   "clicked": 0.002015,
+   "ratio_platform": 0.570086,
+   "ratio_platform_ci95": [
+    0.567744,
+    0.571928
+   ],
+   "ratio_reader": 0.530017,
+   "ratio_reader_ci95": [
+    0.518211,
+    0.541609
+   ]
+  }
+ ],
+ "role_dissimilarity": {
+  "published": 0.52028,
+  "shown": 0.611905,
+  "clicked": 0.614601
+ },
+ "geography": {
+  "share": {
+   "published": {
+    "United States": 0.826339,
+    "Canada": 0.027963,
+    "Europe": 0.095563,
+    "Asia": 0.013788,
+    "Africa": 0.006744,
+    "Latin America & Caribbean": 0.022934,
+    "Oceania": 0.006669
+   },
+   "shown": {
+    "United States": 0.816491,
+    "Canada": 0.026526,
+    "Europe": 0.100046,
+    "Asia": 0.029021,
+    "Africa": 0.005136,
+    "Latin America & Caribbean": 0.018978,
+    "Oceania": 0.003802
+   },
+   "clicked": {
+    "United States": 0.829381,
+    "Canada": 0.019583,
+    "Europe": 0.094362,
+    "Asia": 0.035867,
+    "Africa": 0.003624,
+    "Latin America & Caribbean": 0.015168,
+    "Oceania": 0.002015
+   }
+  },
+  "population_share": {
+   "United States": 0.042662,
+   "Canada": 0.00485,
+   "Europe": 0.096869,
+   "Asia": 0.596547,
+   "Africa": 0.169585,
+   "Latin America & Caribbean": 0.084026,
+   "Oceania": 0.005462
+  },
+  "visibility_index_shown": {
+   "United States": 19.138702,
+   "Canada": 5.468998,
+   "Europe": 1.032802,
+   "Asia": 0.048648,
+   "Africa": 0.030287,
+   "Latin America & Caribbean": 0.225861,
+   "Oceania": 0.696068
+  },
+  "appearances_with_region_shown": 51206031.0
+ },
+ "top_people": [
+  {
+   "name": "Donald Trump",
+   "gender": "M",
+   "role": "Politics & government",
+   "displays": 5062994.0,
+   "clicks": 177627.0,
+   "articles": 1045.0,
+   "share_of_all_appearances": 0.098467
+  },
+  {
+   "name": "Meghan, Duchess of Sussex",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 1474812.0,
+   "clicks": 78741.0,
+   "articles": 53.0,
+   "share_of_all_appearances": 0.028683
+  },
+  {
+   "name": "Prince Harry, Duke of Sussex",
+   "gender": "M",
+   "role": "Sports",
+   "displays": 892327.0,
+   "clicks": 66026.0,
+   "articles": 28.0,
+   "share_of_all_appearances": 0.017354
+  },
+  {
+   "name": "Joe Biden",
+   "gender": "M",
+   "role": "Politics & government",
+   "displays": 649418.0,
+   "clicks": 39843.0,
+   "articles": 82.0,
+   "share_of_all_appearances": 0.01263
+  },
+  {
+   "name": "Jennifer Lopez",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 518482.0,
+   "clicks": 26602.0,
+   "articles": 15.0,
+   "share_of_all_appearances": 0.010084
+  },
+  {
+   "name": "Colin Kaepernick",
+   "gender": "M",
+   "role": "Sports",
+   "displays": 513631.0,
+   "clicks": 55355.0,
+   "articles": 99.0,
+   "share_of_all_appearances": 0.009989
+  },
+  {
+   "name": "Catherine, Duchess of Cambridge",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 435700.0,
+   "clicks": 20143.0,
+   "articles": 33.0,
+   "share_of_all_appearances": 0.008474
+  },
+  {
+   "name": "Donald Trump Jr.",
+   "gender": "M",
+   "role": "Entertainment & arts",
+   "displays": 434507.0,
+   "clicks": 31117.0,
+   "articles": 24.0,
+   "share_of_all_appearances": 0.00845
+  },
+  {
+   "name": "Charles, Prince of Wales",
+   "gender": "M",
+   "role": "Politics & government",
+   "displays": 392711.0,
+   "clicks": 31281.0,
+   "articles": 13.0,
+   "share_of_all_appearances": 0.007638
+  },
+  {
+   "name": "Kanye West",
+   "gender": "M",
+   "role": "Entertainment & arts",
+   "displays": 359737.0,
+   "clicks": 19040.0,
+   "articles": 17.0,
+   "share_of_all_appearances": 0.006996
+  },
+  {
+   "name": "Drake (musician)",
+   "gender": "M",
+   "role": "Entertainment & arts",
+   "displays": 332808.0,
+   "clicks": 19597.0,
+   "articles": 8.0,
+   "share_of_all_appearances": 0.006473
+  },
+  {
+   "name": "Chrissy Teigen",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 332760.0,
+   "clicks": 13208.0,
+   "articles": 15.0,
+   "share_of_all_appearances": 0.006472
+  },
+  {
+   "name": "Myles Garrett",
+   "gender": "M",
+   "role": "Sports",
+   "displays": 329436.0,
+   "clicks": 32874.0,
+   "articles": 102.0,
+   "share_of_all_appearances": 0.006407
+  },
+  {
+   "name": "Taylor Swift",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 322140.0,
+   "clicks": 15448.0,
+   "articles": 20.0,
+   "share_of_all_appearances": 0.006265
+  },
+  {
+   "name": "John Legend",
+   "gender": "M",
+   "role": "Entertainment & arts",
+   "displays": 315654.0,
+   "clicks": 11361.0,
+   "articles": 16.0,
+   "share_of_all_appearances": 0.006139
+  },
+  {
+   "name": "Miranda Lambert",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 300865.0,
+   "clicks": 12627.0,
+   "articles": 7.0,
+   "share_of_all_appearances": 0.005851
+  },
+  {
+   "name": "Selena Gomez",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 293287.0,
+   "clicks": 21372.0,
+   "articles": 6.0,
+   "share_of_all_appearances": 0.005704
+  },
+  {
+   "name": "Sharon Osbourne",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 290492.0,
+   "clicks": 16636.0,
+   "articles": 3.0,
+   "share_of_all_appearances": 0.00565
+  },
+  {
+   "name": "Marie L. Yovanovitch",
+   "gender": "F",
+   "role": "Politics & government",
+   "displays": 284997.0,
+   "clicks": 11545.0,
+   "articles": 90.0,
+   "share_of_all_appearances": 0.005543
+  },
+  {
+   "name": "Teresa Giudice",
+   "gender": "F",
+   "role": "Entertainment & arts",
+   "displays": 280565.0,
+   "clicks": 11835.0,
+   "articles": 10.0,
+   "share_of_all_appearances": 0.005457
+  }
+ ],
+ "top_women": [
+  {
+   "name": "Meghan, Duchess of Sussex",
+   "role": "Entertainment & arts",
+   "displays": 1474812.0,
+   "articles": 53.0
+  },
+  {
+   "name": "Jennifer Lopez",
+   "role": "Entertainment & arts",
+   "displays": 518482.0,
+   "articles": 15.0
+  },
+  {
+   "name": "Catherine, Duchess of Cambridge",
+   "role": "Entertainment & arts",
+   "displays": 435700.0,
+   "articles": 33.0
+  },
+  {
+   "name": "Chrissy Teigen",
+   "role": "Entertainment & arts",
+   "displays": 332760.0,
+   "articles": 15.0
+  },
+  {
+   "name": "Taylor Swift",
+   "role": "Entertainment & arts",
+   "displays": 322140.0,
+   "articles": 20.0
+  },
+  {
+   "name": "Miranda Lambert",
+   "role": "Entertainment & arts",
+   "displays": 300865.0,
+   "articles": 7.0
+  },
+  {
+   "name": "Selena Gomez",
+   "role": "Entertainment & arts",
+   "displays": 293287.0,
+   "articles": 6.0
+  },
+  {
+   "name": "Sharon Osbourne",
+   "role": "Entertainment & arts",
+   "displays": 290492.0,
+   "articles": 3.0
+  },
+  {
+   "name": "Marie L. Yovanovitch",
+   "role": "Politics & government",
+   "displays": 284997.0,
+   "articles": 90.0
+  },
+  {
+   "name": "Teresa Giudice",
+   "role": "Entertainment & arts",
+   "displays": 280565.0,
+   "articles": 10.0
+  }
+ ],
+ "concentration": {
+  "people_shown": 4461,
+  "top10_share_of_appearances": 0.208765,
+  "top10_women_count": 3,
+  "top20_women_count": 10,
+  "top1_share_of_appearances": 0.098467
+ },
+ "personalization": {
+  "impressions_with_people": 2518430,
+  "impressions_with_people_but_no_woman": 0.147457,
+  "eligible_users": 525715,
+  "observed_sd": 0.092001,
+  "null_sd_mean": 0.078946,
+  "null_sd_ci95": [
+   0.078812,
+   0.07914
+  ],
+  "excess_spread": 1.165374,
+  "low_threshold": 0.1,
+  "high_threshold": 0.4,
+  "observed_share_below_low": 0.008596,
+  "null_share_below_low": 0.004385,
+  "null_share_below_low_ci95": [
+   0.00418,
+   0.004575
+  ],
+  "observed_share_above_high": 0.237311,
+  "null_share_above_high": 0.189953,
+  "observed_median": 0.337838,
+  "observed_p10": 0.213483,
+  "observed_p90": 0.446602,
+  "hist_bins": [
+   0.0,
+   0.025,
+   0.05,
+   0.075,
+   0.1,
+   0.125,
+   0.15,
+   0.175,
+   0.2,
+   0.225,
+   0.25,
+   0.275,
+   0.3,
+   0.325,
+   0.35,
+   0.375,
+   0.4,
+   0.425,
+   0.45,
+   0.475,
+   0.5,
+   0.525,
+   0.55,
+   0.575,
+   0.6,
+   0.625,
+   0.65,
+   0.675,
+   0.7,
+   0.725,
+   0.75,
+   0.775,
+   0.8,
+   0.825,
+   0.85,
+   0.875,
+   0.9,
+   0.925,
+   0.95,
+   0.975,
+   1.0
+  ],
+  "hist_observed": [
+   0.000757,
+   0.001343,
+   0.001952,
+   0.004544,
+   0.007099,
+   0.014787,
+   0.019071,
+   0.026646,
+   0.043434,
+   0.049987,
+   0.078217,
+   0.094525,
+   0.100229,
+   0.116531,
+   0.105059,
+   0.098508,
+   0.08738,
+   0.055715,
+   0.038785,
+   0.019927,
+   0.019058,
+   0.007213,
+   0.004837,
+   0.002515,
+   0.000829,
+   0.000519,
+   0.000304,
+   0.000127,
+   6.3e-05,
+   8e-06,
+   1.7e-05,
+   2e-06,
+   8e-06,
+   0.0,
+   4e-06,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "hist_null": [
+   0.000299,
+   0.00071,
+   0.000949,
+   0.002427,
+   0.003836,
+   0.008673,
+   0.012038,
+   0.018079,
+   0.033936,
+   0.045027,
+   0.078366,
+   0.106485,
+   0.124763,
+   0.145602,
+   0.125359,
+   0.103499,
+   0.079284,
+   0.045043,
+   0.028925,
+   0.01369,
+   0.012922,
+   0.004661,
+   0.002963,
+   0.001479,
+   0.000484,
+   0.000265,
+   0.000156,
+   5.3e-05,
+   1.5e-05,
+   6e-06,
+   4e-06,
+   1e-06,
+   2e-06,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "feedback_loop": {
+  "users": 337501,
+  "spearman_observed": 0.366437,
+  "spearman_null_mean": 0.024514,
+  "spearman_null_ci95": [
+   0.022023,
+   0.027225
+  ],
+  "ols_slope": 0.153317,
+  "quintiles": [
+   {
+    "history_women_share_mean": 0.052278,
+    "shown_women_share_mean": 0.289171,
+    "null_shown_women_share_mean": 0.332395,
+    "users": 67501
+   },
+   {
+    "history_women_share_mean": 0.182853,
+    "shown_women_share_mean": 0.310105,
+    "null_shown_women_share_mean": 0.332819,
+    "users": 67500
+   },
+   {
+    "history_women_share_mean": 0.298043,
+    "shown_women_share_mean": 0.332561,
+    "null_shown_women_share_mean": 0.333844,
+    "users": 67500
+   },
+   {
+    "history_women_share_mean": 0.428098,
+    "shown_women_share_mean": 0.357154,
+    "null_shown_women_share_mean": 0.335384,
+    "users": 67500
+   },
+   {
+    "history_women_share_mean": 0.626229,
+    "shown_women_share_mean": 0.378646,
+    "null_shown_women_share_mean": 0.337149,
+    "users": 67500
+   }
+  ],
+  "min_history_people": 5
+ },
+ "communities": {
+  "Entertainment first": {
+   "users": 71430,
+   "women_share_shown": 0.380258,
+   "women_share_clicked": 0.466553,
+   "women_share_history": 0.48595,
+   "ratio_shown_vs_published": 2.806017
+  },
+  "Lifestyle first": {
+   "users": 124177,
+   "women_share_shown": 0.362325,
+   "women_share_clicked": 0.433742,
+   "women_share_history": 0.461106,
+   "ratio_shown_vs_published": 2.673686
+  },
+  "Mixed interests": {
+   "users": 333445,
+   "women_share_shown": 0.339704,
+   "women_share_clicked": 0.327359,
+   "women_share_history": 0.314059,
+   "ratio_shown_vs_published": 2.506765
+  },
+  "Money first": {
+   "users": 7801,
+   "women_share_shown": 0.320854,
+   "women_share_clicked": 0.298535,
+   "women_share_history": 0.225622,
+   "ratio_shown_vs_published": 2.367662
+  },
+  "News first": {
+   "users": 146047,
+   "women_share_shown": 0.295438,
+   "women_share_clicked": 0.247421,
+   "women_share_history": 0.210236,
+   "ratio_shown_vs_published": 2.180113
+  },
+  "No click history": {
+   "users": 14086,
+   "women_share_shown": 0.335674,
+   "women_share_clicked": 0.335063,
+   "women_share_history": null,
+   "ratio_shown_vs_published": 2.477022
+  },
+  "Sports first": {
+   "users": 53448,
+   "women_share_shown": 0.282048,
+   "women_share_clicked": 0.171888,
+   "women_share_history": 0.11674,
+   "ratio_shown_vs_published": 2.081304
+  }
+ },
+ "activity": {
+  "Light": {
+   "users": 250145,
+   "median_history_clicks": 4.0,
+   "women_share_shown": 0.33219
+  },
+  "Medium": {
+   "users": 250144,
+   "median_history_clicks": 10.0,
+   "women_share_shown": 0.335269
+  },
+  "Heavy": {
+   "users": 250145,
+   "median_history_clicks": 30.0,
+   "women_share_shown": 0.336166
+  }
+ },
+ "recommenders": {
+  "impressions": 100000,
+  "candidates": 3733188,
+  "candidate_pool_women_share": 0.338633,
+  "published_women_share": 0.135515,
+  "models": {
+   "Random order": {
+    "auc": 0.501002,
+    "top5_women_share": 0.314733,
+    "top5_share_articles_with_woman": 0.165712,
+    "top5_with_people_but_no_woman": 0.324781
+   },
+   "Most popular": {
+    "auc": 0.624345,
+    "top5_women_share": 0.270344,
+    "top5_share_articles_with_woman": 0.170974,
+    "top5_with_people_but_no_woman": 0.299826
+   },
+   "Personalized (reading history)": {
+    "auc": 0.609855,
+    "top5_women_share": 0.36516,
+    "top5_share_articles_with_woman": 0.223474,
+    "top5_with_people_but_no_woman": 0.259184
+   },
+   "Hybrid (history + popularity)": {
+    "auc": 0.657723,
+    "top5_women_share": 0.360203,
+    "top5_share_articles_with_woman": 0.244274,
+    "top5_with_people_but_no_woman": 0.227355
+   }
+  },
+  "tradeoff_hybrid": [
+   {
+    "auc": 0.657736,
+    "top5_women_share": 0.360075,
+    "top5_share_articles_with_woman": 0.24421,
+    "top5_with_people_but_no_woman": 0.22743,
+    "lambda": 0
+   },
+   {
+    "auc": 0.656048,
+    "top5_women_share": 0.375095,
+    "top5_share_articles_with_woman": 0.263116,
+    "top5_with_people_but_no_woman": 0.206949,
+    "lambda": 0.02
+   },
+   {
+    "auc": 0.655435,
+    "top5_women_share": 0.398223,
+    "top5_share_articles_with_woman": 0.296756,
+    "top5_with_people_but_no_woman": 0.185132,
+    "lambda": 0.05
+   },
+   {
+    "auc": 0.653972,
+    "top5_women_share": 0.430469,
+    "top5_share_articles_with_woman": 0.350851,
+    "top5_with_people_but_no_woman": 0.156709,
+    "lambda": 0.1
+   },
+   {
+    "auc": 0.652094,
+    "top5_women_share": 0.454472,
+    "top5_share_articles_with_woman": 0.397591,
+    "top5_with_people_but_no_woman": 0.132722,
+    "lambda": 0.15
+   },
+   {
+    "auc": 0.649739,
+    "top5_women_share": 0.473178,
+    "top5_share_articles_with_woman": 0.437216,
+    "top5_with_people_but_no_woman": 0.116246,
+    "lambda": 0.2
+   },
+   {
+    "auc": 0.644374,
+    "top5_women_share": 0.50281,
+    "top5_share_articles_with_woman": 0.504531,
+    "top5_with_people_but_no_woman": 0.087342,
+    "lambda": 0.3
+   },
+   {
+    "auc": 0.638699,
+    "top5_women_share": 0.524189,
+    "top5_share_articles_with_woman": 0.555842,
+    "top5_with_people_but_no_woman": 0.070077,
+    "lambda": 0.4
+   },
+   {
+    "auc": 0.631853,
+    "top5_women_share": 0.541631,
+    "top5_share_articles_with_woman": 0.598446,
+    "top5_with_people_but_no_woman": 0.056776,
+    "lambda": 0.5
+   },
+   {
+    "auc": 0.617949,
+    "top5_women_share": 0.572302,
+    "top5_share_articles_with_woman": 0.676863,
+    "top5_with_people_but_no_woman": 0.0479,
+    "lambda": 0.75
+   },
+   {
+    "auc": 0.61205,
+    "top5_women_share": 0.584997,
+    "top5_share_articles_with_woman": 0.710684,
+    "top5_with_people_but_no_woman": 0.047736,
+    "lambda": 1.0
+   }
+  ],
+  "parity_point": {
+   "lambda": 0,
+   "auc": 0.657736,
+   "auc_cost": 0.0,
+   "top5_women_share": 0.360075
+  }
+ },
+ "robustness": {
+  "main (titles + abstracts)": {
+   "published": 0.135515,
+   "shown": 0.335204,
+   "clicked": 0.328136,
+   "ratio_shown_vs_published": 2.473555,
+   "ratio_clicked_vs_published": 2.421395
+  },
+  "published = full news catalog": {
+   "published": 0.119855,
+   "shown": 0.335204,
+   "clicked": 0.328136,
+   "ratio_shown_vs_published": 2.796747,
+   "ratio_clicked_vs_published": 2.737773
+  },
+  "titles only": {
+   "published": 0.125145,
+   "shown": 0.313647,
+   "clicked": 0.305028,
+   "ratio_shown_vs_published": 2.506279,
+   "ratio_clicked_vs_published": 2.437406
+  },
+  "entity confidence >= 0.9": {
+   "published": 0.135515,
+   "shown": 0.335204,
+   "clicked": 0.328136,
+   "ratio_shown_vs_published": 2.473555,
+   "ratio_clicked_vs_published": 2.421395
+  },
+  "without the 10 most-shown people": {
+   "published": 0.142988,
+   "shown": 0.363942,
+   "clicked": 0.356211,
+   "ratio_shown_vs_published": 2.54527,
+   "ratio_clicked_vs_published": 2.491198
+  },
+  "article level (features any woman)": {
+   "published": 0.178417,
+   "shown": 0.38989,
+   "clicked": 0.367806,
+   "ratio_shown_vs_published": 2.185275,
+   "ratio_clicked_vs_published": 2.061496
+  },
+  "train logs only": {
+   "published": 0.136162,
+   "shown": 0.334575,
+   "clicked": 0.335961,
+   "ratio_shown_vs_published": 2.457177,
+   "ratio_clicked_vs_published": 2.467363
+  },
+  "dev logs only": {
+   "published": 0.202532,
+   "shown": 0.339008,
+   "clicked": 0.281791,
+   "ratio_shown_vs_published": 1.673853,
+   "ratio_clicked_vs_published": 1.391342
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Funnel Vision",
+  "members": [
+    ["Soufiane Amribt", "Computer Science (cybersecurity), UNB", "Data pipeline, statistics and recommender experiment"],
+    ["Jenny Kim", "Software Engineering, UNB", "Independent reproduction of the results on a second machine, code review"],
+    ["Josh Bacon", "Software Engineering, UNB", "Fact-check of findings against the data, review of limitations and wording"]
+  ],
+  "code_url": "",
+  "collaboration": ""
+}
