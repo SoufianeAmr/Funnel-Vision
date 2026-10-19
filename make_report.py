@@ -1624,8 +1624,9 @@ def page4(pdf, results, preview):
     takeaway = (
         "Readers see different worlds. Among readers shown at least "
         f"{results['meta']['min_people_per_user']} named people, one in ten saw "
-        f"{percent(personalization['observed_p10'], 1)} women or fewer and one in ten "
-        f"{percent(personalization['observed_p90'], 1)} or more. {hyphenate(lowest)} readers saw "
+        f"{percent(personalization['observed_p10'], 1)} women or fewer, while another one in "
+        f"ten saw {percent(personalization['observed_p90'], 1)} or more. {hyphenate(lowest)} "
+        "readers saw "
         f"{percent(large_communities[lowest]['women_share_shown'], 1)} women, "
         f"{hyphenate(highest).lower()} readers "
         f"{percent(large_communities[highest]['women_share_shown'], 1)}. Past clicks predict it "
